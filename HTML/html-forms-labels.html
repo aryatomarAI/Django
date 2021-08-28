@@ -1,0 +1,74 @@
+<!--- we have explored basic input tags, but now we want to understand how to connect these tags to two features: Actions and Labels--->
+<!--- The use of the label tag will allow you to add labels in front of an input in you HTML form . We will explore how to activate actions upon clicking submit.--->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>html_label_actions</title>
+  </head>
+  <body>
+    <form  action="https://www.facebook.com">
+
+        <h1 style="background-color:Orange">Action in HTML</h1>
+        <p>Upon enterning a text and by submiting it you will redirect to facebook page because of the action. </p>
+        <input type="text" name="UserInput" value="Enter text here">
+        <input type="submit" name="" value="Submit">
+        <br>
+        <br>
+        <br>
+    </form>
+    <form action="https://www.facebook.com">
+      <h1 style="background-color:Tomato">Text Input with label</h1>
+      <p style="color:SlateBlue"><strong>A Form with a submit button</strong></p>
+      <label for="fname">First Name:</label>
+      <input id="fname" type="text" name="userfirstname" placeholder="Enter your first name">
+      <label for="lname">Last Name:</label>
+      <input id="lname" type="text" name="userlastname" placeholder="Enter your last name">
+      <input type="submit" name="" value="Submit">
+      <br>
+      <br>
+      <br>
+    </form>
+    <form >
+      <h1 style="background-color:DodgerBlue">Checkboxes</h1>
+      <p>Which of the following things do you want in your life:</p>
+      <input id="house" type="checkbox" name="udesire" value="House">
+      <label for="house">I want a big house</label><br>
+      <input id="car" type="checkbox" name="udesire" value="Car">
+      <label for="car">I want a Ferrari</label><br>
+      <input id="family" type="checkbox" name="udesire" value="Family">
+      <label for="family">I want a two children</label>
+      <br>
+      <br>
+      <br>
+    </form>
+    <form >
+      <h1 style="background-color:MediumSeaGreen">Radio Buttons</h1>
+      <p><strong>Radio buttons let a user select ONE of a limited number of choices.</strong></p>
+      <p>Choose your favourite Sport:</p>
+      <input id="football" type="radio" name="fav_sport" value="Foot">
+      <label for="football">Football</label><br>
+      <input id="cricket" type="radio" name="fav_sport" value="Cricket">
+      <label for="cricket">Cricket</label><br>
+      <input id="hockey" type="radio" name="fav_sport" value="Hockey">
+      <label for="hockey">Hockey</label>
+      <br>
+      <br>
+      <br>
+    </form>
+    <form >
+      <h1 style="background-color:Violet">Required element</h1>
+      <p><strong>Required will allow us to submit form or any information only if we have fulfilled the required criteria.</strong></p>
+      <label for="fname">First Name:</label>
+      <input id='fname' type="text" name="fname" placeholder="required" required><br>
+      <label for="lname">Last Name: </label>
+      <input id="lname" type="text" name="lname" placeholder="optional"><br><br>
+      <input type="submit" name="" value="Submit">
+      <br>
+      <br>
+      <br>
+
+    </form>
+
+  </body>
+</html>
