@@ -1,0 +1,37 @@
+body{
+  background: #ff4d4d;
+}
+h1{
+  color:white;
+}
+h3{
+  color:white;
+}
+.firstdiv{
+  background:white;
+}
+#firsth3{
+  color:#ff3333;
+}
+span{
+  color:#ff3333;
+}
+.seconddiv{
+  background:black;
+  color:white;
+}
+#secondh3{
+  color:#ff3333;
+}
+#firstpara{
+  color:#ff3333;
+}
+h2{
+  color:white;
+}
+label{
+  color:white;
+}
+textarea{
+  color:#ff3333;
+}
