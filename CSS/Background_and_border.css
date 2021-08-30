@@ -1,0 +1,21 @@
+body{
+  background: #001a13;
+}
+h1{
+  color:Orange;
+}
+h3{
+  background: Orange;
+  color:brown;
+}
+div{
+  color:white;
+  border:4px solid white;
+}
+
+span{
+  color:SlateBlue;
+}
+p{
+  color:lightpink;
+}
