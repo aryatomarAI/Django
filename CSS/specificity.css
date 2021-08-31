@@ -1,0 +1,14 @@
+/* Specificity defines the hierarchy of CSS styles, and what type of tags overrule others. */
+li{
+  color:Tomato;
+}
+.topitems{
+  color:green;
+}
+.second{
+  color:Blue;
+}
+#topitems{
+  color:Orange;
+}
+/* So this example shows that the class overrules li and ids overrules classes  */
