@@ -1,0 +1,60 @@
+body{
+  background:black;
+}
+h1{
+  background:#248f24;
+  border:5px solid #248f24;
+  border-radius:3px;
+}
+p{
+  color:#248f24;
+}
+h2{
+  background: #248f24;
+  border:5px solid #248f24;
+  border-radius:3px;
+  color:white;
+}
+li{
+  color:Orange;
+}
+label{
+  color:Orange;
+}
+.exit{
+  border:5px solid #ccffcc;
+  background:#ccffcc;
+  padding:10px;
+}
+#ques{
+  color:black;
+}
+#userfeed{
+border-left:6px solid #248f24;
+}
+#submit{
+  color:white;
+  background:#248f24;
+}
+#user_pass{
+  border-left:4px solid Orange;
+}
+#user_email{
+  border-left:4px solid Orange;
+}
+textarea{
+  border-left:6px solid #248f24;
+}
+a:link{
+  color:#248f24;
+}
+
+a:visited{
+  color:#248f24;
+}
+a:hover{
+  color:yellow;
+}
+a:active{
+  color:SlateBlue;
+}
