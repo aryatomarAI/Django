@@ -1,0 +1,34 @@
+/* In this file we will learn how we can change fonts there sizes,color etc.. */
+h1{
+  font-family:Arial;
+  color:Blue;
+}
+p{
+  font-family:monospace;
+}
+/* Change fonts size */
+body{
+  font-size:20px;
+}
+
+/* Change fonts size with the em */
+#first{
+  font-size:0.75em;
+}
+p{
+  font-style:oblique;
+  font-weight: bold;
+}
+/* Text Properties */
+h1{
+  text-align:center;
+  text-shadow:2px 2px 4px red;
+  text-decoration: overline;
+  text-decoration-color: green;
+
+}
+/* selecting fonts from web */
+#second{
+  font-size:1.5em;
+  font-family: 'Allison', cursive;
+}
