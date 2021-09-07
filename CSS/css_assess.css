@@ -1,0 +1,58 @@
+#one{
+  width:130px;
+  height: 400px;
+  border:10px solid white;
+  background:#F94144;
+  padding:10px;
+
+}
+h1{
+  font-family: 'Permanent Marker', cursive;
+  text-align: center;
+}
+#two{
+  width:130px;
+  height: 400px;
+  border:10px solid white;
+  background:#F3722C;
+  padding:10px;
+}
+#three{
+  width:130px;
+  height: 400px;
+  border:10px solid white;
+  background:#F8961E;
+  padding:10px;
+}
+#four{
+  width:130px;
+  height: 400px;
+  border:10px solid white;
+  background:#F9C74F;
+  padding:10px;
+}
+#five{
+  width:130px;
+  height: 400px;
+  border:10px solid white;
+  background:#90BE6D;
+  padding:10px;
+}
+#six{
+  width:130px;
+height: 400px;
+border:10px solid white;
+background:#43AA8B;
+padding:10px;
+}
+#seven{
+  width:130px;
+  height: 400px;
+  border:10px solid white;
+  background:#577590;
+  padding:10px;
+
+}
+table{
+  margin:auto;
+}
