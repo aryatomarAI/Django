@@ -19,7 +19,7 @@
       <input class="form-control" type="password" name="" value="">
 
     </div>
-    <div class="mb-3">
+    <div class="mb-3 form-check">
       <input id="check_box" type="checkbox" class="form-check-input" name="" value="">
       <label for="check_box" class="form-check-label">Check Me Out...</label>
 
@@ -29,7 +29,79 @@
 
     </div>
 
-  </form>
 
+      <h1>Password Options</h1>
+      <label class="form-label" for="pass">Password</label>
+      <input id="pass" class="form-control" type="password" name="" value="" aria-describedby="passw">
+      <div class="form-text" id="passw">Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.</div>
+      <br>
+      <br>
+    <div class="row g-3 align-item-center">
+      <div class="col-auto">
+        <label form="col-form-control" for="pass1">Password</label>
+
+      </div>
+      <div class="col-auto">
+        <input id="pass1"  form="form-control" aria-describedby="passwo" type="password" name="" value="">
+
+      </div>
+      <div class="col-auto">
+        <span class="form-text" id="passwo">Must be 8-20 characters long.</span>
+
+      </div>
+
+    </div>
+    <br>
+    <br>
+    <h1>ReadOnly Text</h1>
+    <div class="mb-3 row">
+    <label for="mail" class="col-sm-2 col-form-label">Email</label>
+    <div class="col-sm-10">
+      <input type="text" readonly class="form-control-plaintext" id="mail" value="email@example.com">
+    </div>
+  </div>
+  <div class="mb-3 row">
+    <label for="inpass" class="col-sm-2 col-form-label">Password</label>
+    <div class="col-sm-10">
+      <input type="password" class="form-control" id="inpass">
+    </div>
+  </div>
+
+
+  </form>
+  <br>
+  <div class="container">
+
+
+  <form class=" row g-3">
+    <div class="col-auto">
+      <label for="email1" class="visually-hidden">Email</label>
+      <input id="email1" type="text" class="form-control-plaintext" name="" value="user@email.com">
+    </div>
+    <div class="col-auto">
+      <label for="pass3" class="visually-hidden">Password</label>
+      <input id="pass3" type="password" name="" class="form-control"placeholder="Password">
+    </div>
+    <div class="col-auto">
+       <button class="btn btn-info mb-3" type="button" name="button">Submit</button>
+     </div>
+  </form>
+  <br>
+  <br>
+  <h1>Form Input</h1>
+  <div class="mb-3">
+    <label for="cfile" class="form-label">Default file input example</label>
+    <input class="form-control" type="file" name="" value="" id="cfile">
+  </div>
+  <div class="mb-3">
+    <label for="mfile" lass="form-label">Multile file Input</label>
+    <input class="form-control" id="mfile" type="file" name="" value="" multiple>
+  </div>
+  <br>
+  <br>
+  <h1>Choose Color</h1>
+  <label for="ccolor" class="form-label">Choose Color</label>
+  <input type="color" id="ccolor" class="form-control form-control-color" name="" value="#006666">
+  </div>
   </body>
 </html>
