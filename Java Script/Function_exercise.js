@@ -27,3 +27,43 @@ function stringTimes(str, n) {
     }
     console.log(str);
 }
+
+
+function luckySum(a, b, c){
+ if (a==13) {
+   return 0
+ }else if(b==13){
+   return a
+ }else if(c==13){
+   return a+b
+ }else{
+  return a+b+c
+}
+}
+
+
+function caught_speeding(speed, is_birthday){
+   if (is_birthday==true){
+   speed=speed-5
+   }
+   if (speed<= 60) {
+     return 0
+   } else if (speed>60 && speed<=80) {
+     return 1
+   }else if (speed>80){
+     return 2
+   }
+}
+
+function makeBricks(small, big, goal){
+
+  quo=Math.floor(goal/5)
+  rem=goal%5
+  if(quo<=big && rem<=small){
+    return true
+  }else{
+    return false
+  }
+
+
+}
