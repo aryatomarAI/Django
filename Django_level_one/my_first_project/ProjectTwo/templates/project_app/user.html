@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Templates Basics</title>
+  </head>
+  <body>
+    <h1>Here is Your Users Info:</h1>
+    {% if users %}
+    <ol>
+      {% for user in users %}
+      <li>User Info:</li>
+         <ul>
+           <li>First Name : {{person.name}}</li>
+           <li>Last Name : {{person.l_name}}</li>
+           <li>Email : {{person.email}}</li>
+         </ul>
+      {% endfor %}
+    </ol>
+    {% endif %}
+
+  </body>
+</html>
