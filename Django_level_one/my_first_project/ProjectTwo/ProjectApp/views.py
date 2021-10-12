@@ -1,13 +1,12 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from ProjectApp.models import Userinfo
-
 # Create your views here.
 def index(request):
-    my_dict_1={
-    'inert_me':"Go to/users to see the list of user information!"
+    my_dict={
+    "welcome":"Go to/users to see the list of user information!",
     }
-    return render(request,"project_app/index.html",context=my_dict_1)
+    return render(request,"project_app/index.html",context=my_dict)
 
 def user(request):
     users_list=Userinfo.objects.order_by("name")
