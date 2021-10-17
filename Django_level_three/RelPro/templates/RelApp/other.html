@@ -1,11 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>other page</title>
-  </head>
-  <body>
+{% extends "RelApp/base.html" %}
+  {% block body_block %}
     <h1>Welcome to the other Page of this website</h1>
 
-  </body>
-</html>
+    <h2>This is an example of template inheritance! </h2>
+  {% endblock %}
