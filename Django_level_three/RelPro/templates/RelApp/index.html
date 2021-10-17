@@ -1,6 +1,10 @@
+
 <!DOCTYPE html>
  {% extends "RelApp/base.html" %}
+ {% load my_filters %}
    {% block body_block %}
     <h1>Welcome to my Home Page!</h1>
     <h2>This is an example of Template Inheritance!</h2>
+    <h2>{{text|cut:'an'}}</h2>
+    <h2>{{number|add:"99"}}</h2>
    {% endblock %}
