@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 
 class UserProfileInfo(models.Model):
     # create relationship
-    user=models.OneToOneField(User,on_delete=models.CASCADE,)
+    user=models.OneToOneField(User,on_delete=models.CASCADE,primary_key=True,)
 
     # Portfolio site
     portfolio=models.URLField(blank=True)
