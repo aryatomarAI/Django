@@ -89,7 +89,7 @@ DATABASES = {
 
 PASSWORD_HASHERS=[
     'django.contrib.auth.hashers.Argon2PasswordHasher',
-    'django.contrib.auth.hashers.BcryptPasswordHasher',
+    'django.contrib.auth.hashers.BcryptSHA256PasswordHasher',
     'django.contrib.auth.hashers.PBKDF2PasswordHasher',
     'django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher',
 ]
@@ -100,7 +100,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
     {
         'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
-        'OPTIONS':{'min_length':9,},
     },
     {
         'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
@@ -124,7 +123,7 @@ USE_L10N = True
 
 USE_TZ = True
 
-
+LOGIN_URL="/UserApp/user_login/"
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 

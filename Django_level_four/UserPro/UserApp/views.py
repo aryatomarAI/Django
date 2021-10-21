@@ -1,5 +1,9 @@
 from django.shortcuts import render
 from UserApp.forms import UserProfileForm,UserForm
+from django.urls import reverse
+from django.contrib.auth.decorators import login_required
+from django.http import HttpResponse,HttpResponseRedirect
+from django.contrib.auth import authenticate,login,logout
 # Create your views here.
 def index(request):
     return render(request,"UserApp/index.html")
@@ -47,3 +51,38 @@ def register(request):
                                                        'profile_form':profile_form,
                                                        'registered':registered,
                                                         })
+
+
+
+
+def user_login(request):
+    if request.method == "POST":
+        username=request.POST.get('username')
+        password=request.POST.get('password')
+
+        user=authenticate(username=username,password=password)
+
+        if user:
+            if user.is_active():
+                login(request, user)
+                return HttpResponseRedirect(reverse('index'))
+            else:
+                return HttpResponse("Account not Active")
+        else:
+            print("SomeOne tried to login into your account and failed!")
+            print("Username: {} and password: {}".format(username,password))
+
+            return HttpResponse("Invalid Login Details Entered")
+    else:
+        return render(request,"UserApp/login.html")
+
+
+@login_required
+def user_logout(request):
+    logout(request)
+    return HttpResponseRedirect(reverse('index'))
+
+
+@login_required
+def special(request):
+    return HttpResponse("You're logged in, Nice!")
