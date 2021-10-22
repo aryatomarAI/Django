@@ -4,23 +4,29 @@
 {% block body_block %}
   <div class="container">
     <div class="p-3 mb-2 bg-primary text-white border-0">
-      <h1>Please Login In</h1>
+      <h1>Please Log In</h1>
 
-       <form action="{% url 'UserApp.user_login' %}" method="POST">
+       <form action="{% url 'UserApp:user_login' %}" method="POST">
            {% csrf_token %}
-           <div class="mb-3 row">
-             <label for="user_name" class="form-label">User Name:</label>
-             <input type="text" id ="user_name" class="form-control" name="" placeholder="Enter username">
+           <div class="mb-2 row pt-3">
+             <label for="user_name" class="col-sm-2  form-label">User Name:</label>
+             <div class="col-sm-10">
+
+             <input type="text" id ="user_name" class="form-control" name="username" placeholder="Enter username">
+             </div>
            </div>
-           <div class="mb-3 row">
-             <label for="password" class="form-label">Password:</label>
-             <input id="password"  type="password" class="form-control" name="username" value="">
+           <div class="mb-2 row ">
+             <label for="password" class="col-sm-2 form-label">Password:</label>
+             <div class="col-sm-10">
+             <input id="password"  type="password" class="form-control" name="password" value="">
+           </div>
            </div>
            <div class="mb-3">
-             <input type="submit"  class="btn btn-outline-light mb-3" name="password" value="Log In">
+             <input type="submit"  class="btn btn-outline-light mb-3" name="" value="Log In">
            </div>
        </form>
 
     </div>
 
   </div>
+{%endblock%}

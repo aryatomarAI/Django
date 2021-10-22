@@ -16,9 +16,9 @@ def register(request):
    # If you have filled the form
     if request.method == "POST":
        #Get the user form info
-        user_form=UserForm(request.POST)
+        user_form=UserForm(data=request.POST)
         # get the profile form info
-        profile_form=UserProfileForm(request.POST)
+        profile_form=UserProfileForm(data=request.POST)
 
 
       # If the filled information is valid
@@ -28,6 +28,7 @@ def register(request):
             # Set the password for the user
             user.set_password(user.password)
             user.save()
+            login(request, user)
 
             profile=profile_form.save(commit=False)
             profile.user=user
@@ -57,24 +58,24 @@ def register(request):
 
 def user_login(request):
     if request.method == "POST":
-        username=request.POST.get('username')
         password=request.POST.get('password')
+        username=request.POST.get('username')
 
-        user=authenticate(username=username,password=password)
+        user=authenticate(request,username=username,password=password)
 
-        if user:
-            if user.is_active():
+        if user :
+            if user.is_active:
                 login(request, user)
                 return HttpResponseRedirect(reverse('index'))
             else:
                 return HttpResponse("Account not Active")
         else:
-            print("SomeOne tried to login into your account and failed!")
-            print("Username: {} and password: {}".format(username,password))
 
+            print("Someone tried to login into your account and failed!")
+            print("Username: {} and password: {}".format(username,password))
             return HttpResponse("Invalid Login Details Entered")
     else:
-        return render(request,"UserApp/login.html")
+        return render(request,"UserApp/login.html",{})
 
 
 @login_required
