@@ -1,0 +1,18 @@
+{% extends 'CBVapp/stu_base.html' %}
+{% block body_block %}
+
+<div class="border-0">
+  <div class="bg-success p-2 text-dark bg-opacity-25">
+     <h1 class="p-3">Welcome to the School Details Page:</h1>
+     <h2>School Details:</h2>
+     <p>Name: {{school_details.name}}</p>
+     <p>Principal: {{school_details.principal}}</p>
+     <p>Location: {{school_details.location}}</p>
+     <h3>Students: </h3>
+     {% for student in school_details.students.all %}
+       <p>{{student.name}} who is {{student.age}} years old.</p>
+     {% endfor %}
+  </div>
+</div>
+
+{% endblock %}
