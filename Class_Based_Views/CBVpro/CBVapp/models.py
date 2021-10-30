@@ -11,7 +11,7 @@ class School(models.Model):
 
     def get_absolute_url(self):
         return reverse("CBVapp:detail",kwargs={"pk":self.pk})
-
+    
 
 
 class Student(models.Model):
