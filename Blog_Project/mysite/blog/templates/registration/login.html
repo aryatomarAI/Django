@@ -1,0 +1,22 @@
+{% extends "blog/base.html " %}
+{% block body_content %}
+<div class="border-0 container ">
+  <div class="p-3 mb-2 bg-success text-white">
+    <h2>Please Login</h2>
+    <p><strong>(Must be a Super User, please check with the site admin.)</strong></p>
+    {% if forms.errors %}
+      <p>Your Username and Password didn't match.</p>
+    {% endif %}
+    <form  action="{% url "login" %}" method="POST">
+      {% csrf_token %}
+      <table>
+        {{form.as_table}}
+      </table>
+      <input type="submit" class="btn btn-outline-light" name="" value="Login">
+      <input type="hidden" name="next" value="{{next}}">
+    </form>
+
+
+  </div>
+</div>
+{% endblock %}
