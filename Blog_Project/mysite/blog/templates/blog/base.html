@@ -53,8 +53,13 @@
           <li class="nav-item">
             <a >Welcome: {{user.username}}</a>
           </li>
-          
-
+          {% else %}
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'login' %}" aria-label="Login">
+              <span class="fa fa-user" aria-hidden="true">
+            </a>
+          </li>
+          {% endif %}
         </ul>
 
       </div>
