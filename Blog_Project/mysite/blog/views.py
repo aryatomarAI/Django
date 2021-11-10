@@ -2,6 +2,9 @@ from django.shortcuts import render,get_object_or_404,redirect
 from django.views.generic import (TemplateView,ListView,CreateView,DeleteView,UpdateView,DetailView)
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy,reverse
+from blog.models import MyPost,Comment
+from blog.forms import PostForm,CommentForm
+from django.contrib.auth.decorators import login_required
 # Create your views here.
 
 

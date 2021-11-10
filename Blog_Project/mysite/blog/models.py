@@ -1,5 +1,6 @@
 from django.db import models
 from django.urls import reverse
+from django.utils import timezone
 # Create your models here.
 
 
@@ -27,13 +28,13 @@ class MyPost(models.Model):
 
 
 class Comment(models.Model):
-    post=models.ForeignKey("blog.POST",related_name="comments",on_delete=models.CASCADE)
+    post=models.ForeignKey("blog.MyPost",related_name="comments",on_delete=models.CASCADE)
 
     author=models.CharField(max_length=200)
 
     text=models.TextField()
 
-    create_date=models.DateTimeField(default=timezone.now())
+    create_date=models.DateTimeField(default=timezone.now)
 
     approved_comment=models.BooleanField(default=False)
 
