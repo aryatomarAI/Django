@@ -4,7 +4,7 @@ from django.utils import timezone
 # Create your models here.
 
 
-class MyPost(models.Model):
+class Post(models.Model):
     # Check if the author is authorised or not
     author =models.ForeignKey("auth.User",on_delete=models.CASCADE,)
 
@@ -24,11 +24,11 @@ class MyPost(models.Model):
         return self.title
 
     def get_absolute_url(self):
-        return reverse("post_detail",kwargs={'pk':self.pk})
+        return reverse("blog:post_detail",kwargs={'pk':self.pk})
 
 
 class Comment(models.Model):
-    post=models.ForeignKey("blog.MyPost",related_name="comments",on_delete=models.CASCADE)
+    post=models.ForeignKey("blog.Post",related_name="comments",on_delete=models.CASCADE)
 
     author=models.CharField(max_length=200)
 
@@ -46,4 +46,4 @@ class Comment(models.Model):
         return self.text
 
     def get_absolute_url(self):
-        return reverse("post_list")
+        return reverse("blog:post_list")

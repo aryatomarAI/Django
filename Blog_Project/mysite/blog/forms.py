@@ -1,17 +1,17 @@
 from django import forms
-from blog.models import MyPost, Comment
-from django.forms import ModelForm, Textarea
+from blog.models import Post, Comment
+
 
 
 class PostForm(forms.ModelForm):
     class Meta:
-        model=MyPost
+        model=Post
         fields=("author","title","text")
 
 
         # Widgets
-        widgets={'title':forms.Textarea(attrs={"class":"textInputClass",'placeholder':'Enter a Value'}),
-                 'text':forms.Textarea(attrs={'class':'editable medium-editor-textarea postcontent','placeholder':'Enter your blog'}),
+        widgets={'title':forms.TextInput(attrs={"class":"textinputclass",'placeholder':'Enter a Value'}),
+                 'text':forms.Textarea(attrs={'class':'editable medium-editor-textarea postcontent'}),
 
         }
 
