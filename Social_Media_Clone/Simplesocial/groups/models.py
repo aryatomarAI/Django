@@ -31,7 +31,7 @@ class Group(models.Model):
         return reverse("groups:single",kwargs={"slug":self.slug})
 
     class Meta:
-        order_by=["name"]
+        ordering=["name"]
 
 
 class GroupMember(models.Model):

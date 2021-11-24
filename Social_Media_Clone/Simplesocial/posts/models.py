@@ -1,5 +1,5 @@
 from django.db import models
-from djnago.urls import reverse
+from django.urls import reverse
 from django.conf import settings
 import misaka
 from groups.models import Group
@@ -28,5 +28,5 @@ class Post(models.Model):
         return reverse("posts:single",kwargs={"username":self.user.username,"pk":self.pk})
 
     class Meta:
-        order_by=["-created_at"]
+        ordering=["-created_at"]
         unique_together=['user','message']

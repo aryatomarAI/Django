@@ -5,10 +5,8 @@ from django.views import generic
 from django.urls import reverse_lazy
 # Create your views here.
 from django.http import Http404
-
 from braces.views import SelectRelatedMixin
-from django.
-
+from django.views import generic
 from . import models
 from . import forms
 from django.contrib.auth import get_user_model
@@ -47,7 +45,7 @@ class PostDetail(SelectRelatedMixin,generic.DetailView):
     def get_queryset(self):
         queryset=super().get_queryset()
 
-        return queryset.filter(user__username__iexact=self.Kwargs.get("username"))
+        return queryset.filter(user__username__iexact=self.kwargs.get("username"))
 
 
 

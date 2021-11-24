@@ -2,9 +2,9 @@ from django.shortcuts import render
 from django.contrib.auth.mixins import LoginRequiredMixin,PermissionRequiredMixin
 from django.urls import reverse
 from django.views import generic
-from group.models import Group, GroupMember
+from groups.models import Group, GroupMember
 from . import models
-from django.shorcuts import get_object_or_404
+from django.shortcuts import get_object_or_404
 from django.contrib import messages
 # Create your views here.
 
