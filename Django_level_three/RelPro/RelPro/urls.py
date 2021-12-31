@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
+from django.conf import settings
 from RelApp import views
 
 urlpatterns = [
@@ -22,3 +23,12 @@ urlpatterns = [
     path("",views.index,name="index"),
     path("RelApp/",include("RelApp.urls")),
 ]
+
+
+if settings.DEBUG:
+    import debug_toolbar
+    urlpatterns = [
+               url(r"^__debug__/",include(debug_toolbar.urls))
+    ]   + urlpatterns
+
+INTERNAL_IPS=["127.0.0.1"]
